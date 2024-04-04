@@ -1,5 +1,6 @@
 import "./globals.css";
 import Nav from "./components/nav";
+import Footer from "./components/footer";
 
 export const metadata = {
   title: "Home",
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
       <body className="bg-slate-800">
         <Nav />
         <main className="p-2">{children}</main>
+        <Footer />
       </body>
     </html>
   );
