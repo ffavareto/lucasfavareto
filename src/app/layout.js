@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Home",
-  description: "Welcome to Next.js",
+  title: "Lucas Santos",
+  description: "Desenvolvedor front-end | Angular | TypeScript | Jest",
 };
 
 export default function RootLayout({ children }) {
