@@ -1,4 +1,5 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 import Nav from "./components/nav";
 import "./globals.css";
 
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
         <Nav />
         <main>{children}</main>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
