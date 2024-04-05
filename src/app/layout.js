@@ -1,3 +1,4 @@
+import Nav from "./components/nav";
 import "./globals.css";
 
 export const metadata = {
@@ -8,8 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-slate-100">
-        <main className="p-4">{children}</main>
+      <body className="bg-slate-800">
+        <Nav />
+        <main>{children}</main>
       </body>
     </html>
   );

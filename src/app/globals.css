@@ -3,6 +3,22 @@
 @tailwind utilities;
 
 ::selection {
-  background-color: #1e293b;
-  color: #ffffff;
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+::-webkit-scrollbar {
+  width: 0.0001px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e293b;
 }
