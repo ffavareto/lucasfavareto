@@ -9,10 +9,10 @@ export default function Nav() {
   const title = pathname === "/" ? "Currículo" : "Voltar";
 
   return (
-    <header className=" flex justify-end">
+    <header>
       <Link
         href={route}
-        className="bg-slate-100 p-1 rounded-md hover:mt-1 absolute top-4 right-4"
+        className="bg-slate-100 p-1 rounded-md absolute top-4 right-4"
       >
         {title}
       </Link>
