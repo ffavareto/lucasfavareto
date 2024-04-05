@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Nav from "./components/nav";
 import "./globals.css";
 
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
       <body className="bg-slate-800">
         <Nav />
         <main>{children}</main>
+        <SpeedInsights />
       </body>
     </html>
   );
