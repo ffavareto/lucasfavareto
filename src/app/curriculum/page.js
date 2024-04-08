@@ -86,6 +86,32 @@ export default function Curriculum() {
               </div>
             </div>
           </div>
+
+          <div className="border-2 border-slate-100 p-5 font-mono flex flex-col gap-2 mt-4 text-slate-100">
+            <Title>Habilidades</Title>
+            <div className="flex flex-col gap-4 text-xs md:text-base">
+              <div className="mb-4">
+                <p>- Angular</p>
+                <p>- TypeScript</p>
+                <p>- JavaScript</p>
+                <p>- Git</p>
+                <p>- Scrum</p>
+                <p>- Tailwind</p>
+                <p>- Material Design</p>
+                <p>- Prime NG</p>
+                <p>- CSS, SCSS</p>
+                <p>
+                  - React e NextJS (não tenho experiência de trabalho mas sei
+                  usá-los)
+                </p>
+                <p>- SQL (não tenho experiência de trabalho mas sei usá-lo)</p>
+                <p>
+                  - Testes unitários/ integração com Jest (não tenho experiência
+                  de trabalho mas sei usá-lo)
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
