@@ -1,8 +1,4 @@
 import Image from "next/image";
-
-import github from "../../../public/github.svg";
-import linkedin from "../../../public/linkedin.svg";
-import gmail from "../../../public/gmail.svg";
 import lucas from "../../../public/lucas-santos.jpeg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,66 +13,62 @@ export default function Profile() {
     <>
       <div className="flex items-center justify-center h-screen flex-col">
         <Image
-          src={lucas}
-          width={256}
-          height={256}
           alt="Lucas Santos"
-          priority={true}
           className="rounded-full mb-4"
+          height={192}
+          priority={true}
+          src={lucas}
+          width={192}
         />
 
         <div>
-          <h1 className="text-slate-100 text-4xl font-mono text-center">
-            Lucas Santos
-          </h1>
-          <h1 className="text-slate-100 font-mono text-center">
-            Front-End Developer
-          </h1>
+          <h1 className="text-slate-100 text-4xl  text-center">Lucas Santos</h1>
+          <h1 className="text-slate-100  text-center">Front-End Developer</h1>
         </div>
 
         <div className="flex gap-4 mt-4">
           <a
+            aria-label="GitHub"
             href="https://github.com/ffavareto"
             target="_blank"
-            aria-label="GitHub"
           >
             <FontAwesomeIcon
-              icon={faGithub}
+              aria-label="GitHub"
               color="#f1f5f9"
               height={42}
-              width={42}
+              icon={faGithub}
               title="GitHub"
-              aria-label="GitHub"
+              width={42}
             />
           </a>
 
           <a
+            aria-label="LinkedIn"
             href="https://www.linkedin.com/in/lucasfavareto/"
             target="_blank"
-            aria-label="LinkedIn"
           >
             <FontAwesomeIcon
-              icon={faLinkedin}
+              aria-label="LinkedIn"
               color="#f1f5f9"
               height={42}
-              width={42}
+              icon={faLinkedin}
               title="LinkedIn"
-              aria-label="LinkedIn"
+              width={42}
             />
           </a>
 
           <a
+            aria-label="Gmail"
             href="mailto:lucasfavaretosantos98@gmail.com"
             target="_blank"
-            aria-label="Gmail"
           >
             <FontAwesomeIcon
-              icon={faGoogle}
+              aria-label="Gmail"
               color="#f1f5f9"
               height={42}
-              width={42}
+              icon={faGoogle}
               title="Gmail"
-              aria-label="Gmail"
+              width={42}
             />
           </a>
         </div>

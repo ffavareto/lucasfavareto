@@ -9,24 +9,24 @@ export default function Curriculum() {
       <div className="p-4">
         <div className="text-slate-100">
           <div className="m-8">
-            <h2 className="text-center font-mono">CURRÍCULO</h2>
+            <h2 className="text-center">CURRÍCULO</h2>
           </div>
 
           <div className="mt-8 flex items-center justify-center">
-            <h1 className="w-fit text-center text-2xl md:text-5xl border-4 border-slate-100 p-5 pb-3 font-bold font-mono">
+            <h1 className="w-fit text-center text-2xl md:text-5xl border-4 border-slate-100 p-5 pb-3 font-bold">
               LUCAS SANTOS
             </h1>
           </div>
 
           <div className="mb-2 flex items-center justify-center text-slate-400 flex-col">
-            <h1 className="w-fit text-center md:text-2xl p-5 pb-3 font-bold font-mono">
+            <h1 className="w-fit text-center md:text-2xl p-5 pb-3 font-bold">
               DESENVOLVEDOR FRONT-END
             </h1>
           </div>
         </div>
 
         <div>
-          <div className="border-2 border-slate-100 p-5 font-mono flex flex-col gap-2 text-slate-100">
+          <div className="border-2 border-slate-100 p-5 flex flex-col gap-2 text-slate-100">
             <Title>Sobre mim</Title>
             <div className="flex flex-col gap-4 text-xs md:text-base">
               <p>
@@ -53,7 +53,7 @@ export default function Curriculum() {
             </div>
           </div>
 
-          <div className="border-2 border-slate-100 p-5 font-mono flex flex-col gap-2 mt-4 text-slate-100">
+          <div className="border-2 border-slate-100 p-5 flex flex-col gap-2 mt-4 text-slate-100">
             <Title>Experiência</Title>
             <div className="flex flex-col gap-4 text-xs md:text-base">
               <div className="mb-4">
@@ -87,7 +87,7 @@ export default function Curriculum() {
             </div>
           </div>
 
-          <div className="border-2 border-slate-100 p-5 font-mono flex flex-col gap-2 mt-4 text-slate-100">
+          <div className="border-2 border-slate-100 p-5 flex flex-col gap-2 mt-4 text-slate-100">
             <Title>Habilidades</Title>
             <div className="flex flex-col gap-4 text-xs md:text-base">
               <div className="mb-4">
