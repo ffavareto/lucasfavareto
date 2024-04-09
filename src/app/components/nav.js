@@ -16,16 +16,6 @@ export default function Nav() {
       >
         {title}
       </Link>
-      {pathname === "/contact" ? (
-        ""
-      ) : (
-        <Link
-          className="bg-green-400 p-1 rounded-md absolute top-4 left-4 text-slate-800"
-          href="/contact"
-        >
-          Contato
-        </Link>
-      )}
     </header>
   );
 }
