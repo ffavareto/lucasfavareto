@@ -8,8 +8,8 @@ export default function Curriculum() {
     <>
       <div className="p-4">
         <div className="text-slate-100">
-          <div className="m-8">
-            <h2 className="text-center">CURRÍCULO</h2>
+          <div className="m-8 flex justify-center">
+            <Title>Currículo</Title>
           </div>
 
           <div className="mt-8 flex items-center justify-center">
