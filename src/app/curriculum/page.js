@@ -36,19 +36,15 @@ export default function Curriculum() {
                 novembro de 2019.
               </p>
               <p>
-                Tenho uma boa base técnica no front-end e estou constantemente
-                ampliando meu conhecimento, recentemente explorando áreas como
-                SQL, NestJS e Docker. Além disso, tenho me dedicado ao
-                aprimoramento em testes unitários, reconhecendo sua importância
-                fundamental para garantir a qualidade e estabilidade de qualquer
-                aplicação em produção.
+                Minhas habilidades técnicas estão mais voltadas ao front-end que
+                é onde tenho experiência sólida porém tenho estudado assuntos
+                além disso como testes unitários e de integração, algoritmos,
+                estrutura de dados, time/ space complexity, SQL, Docker, entre
+                outros assuntos que se relacionam.
               </p>
               <p>
-                Minha experiência abrange desde novas implementações até
-                manutenções em projetos existentes, incluindo migrações de
-                tecnologia. Estou comprometido em buscar sempre os melhores
-                padrões e práticas de desenvolvimento para entregar soluções de
-                alta qualidade e desempenho.
+                Participei de projetos novos, projetos em andamento, projetos
+                antigos e também com migrações de tecnologia.
               </p>
             </div>
           </div>
