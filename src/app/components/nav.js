@@ -8,7 +8,7 @@ export default function Nav() {
   ];
 
   return (
-    <header className="flex gap-2 p-2 justify-end">
+    <header className="flex gap-2 p-2 justify-center md:justify-end">
       {routes.map((route, i) => {
         return (
           <Link
