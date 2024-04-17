@@ -8,6 +8,11 @@ export default function Certifications() {
       url: "https://interstate21.com/certificate/?code=5D14JTX",
     },
     {
+      title: "Java: aplicando a Orientação a Objetos",
+      description: "Certificado emitido pela Alura",
+      url: "https://cursos.alura.com.br/user/lucas-santos-ecs-com-br/course/java-aplicando-orientacao-objetos/certificate",
+    },
+    {
       title: "Análise e Design Web 2.0",
       description: "Certificado emitido pela FIAP",
       url: "https://fiapupdown.s3.amazonaws.com/DocumentosAssinados/5d3b693f-1f23-4da7-a35f-5327d4145b26.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJ5QBKRMKQIUZ5SEQ%2F20240415%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240415T194214Z&X-Amz-SignedHeaders=host&X-Amz-Expires=24000&X-Amz-Signature=577ef1de6d21ec0cb2082b4f2e8ea9277f7bba457fb7d18bd955317e77257451",
