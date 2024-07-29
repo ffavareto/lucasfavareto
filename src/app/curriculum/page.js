@@ -20,53 +20,30 @@ export default function Curriculum() {
 
           <div className="mb-2 flex items-center justify-center text-slate-400 flex-col">
             <h1 className="w-fit text-center md:text-2xl p-5 pb-3 font-bold">
-              DESENVOLVEDOR FRONT-END
+              DESENVOLVEDOR WEB
             </h1>
           </div>
         </div>
 
         <div>
-          <div className="border-2 border-slate-100 p-5 flex flex-col gap-2 text-slate-100">
-            <Title>Sobre mim</Title>
-            <div className="flex flex-col gap-4 text-xs md:text-base">
-              <p>
-                Sou um desenvolvedor front-end com especialização em tecnologias
-                como Angular e TypeScript, acumulando mais de {experienceYears}{" "}
-                anos de experiência desde o meu início como estagiário em
-                novembro de 2019.
-              </p>
-              <p>
-                Minhas habilidades técnicas estão mais voltadas ao front-end que
-                é onde tenho experiência sólida porém tenho estudado assuntos
-                além disso como testes unitários e de integração, algoritmos,
-                estrutura de dados, time/ space complexity, SQL, Docker, entre
-                outros assuntos que se relacionam.
-              </p>
-              <p>
-                Participei de projetos novos, projetos em andamento, projetos
-                antigos e também com migrações de tecnologia.
-              </p>
-            </div>
-          </div>
-
-          <div className="border-2 border-slate-100 p-5 flex flex-col gap-2 mt-4 text-slate-100">
+          <div className="border-2 border-slate-100 p-5 flex flex-col gap-2 mb-4 text-slate-100">
             <Title>Experiência</Title>
             <div className="flex flex-col gap-4 text-xs md:text-base">
               <div className="mb-4">
-                <h2>ECS Inovação - Desenvolvedor front-end</h2>
-                <p>Setembro de 2022 - presente</p>
+                <h2>ECS Inovação - Desenvolvedor web</h2>
+                <p>Setembro de 2022 - cargo atual</p>
                 <p>
                   Na ECS, tive a oportunidade de participar ativamente da
                   migração do projeto da Pharmalink de AngularJS para Angular 16
                   como desenvolvedor front-end. Essa experiência foi
                   enriquecedora, pois pude contribuir para a modernização da
-                  plataforma que agora conecta mais de 50 mil farmácias e
+                  plataforma que agora conecta mais de <b>50 mil farmácias</b> e
                   drogarias.
                 </p>
               </div>
               <hr />
               <div className="my-4">
-                <h2>Faculdade IV2 - Desenvolvedor e instrutor front-end</h2>
+                <h2>Faculdade IV2 - Desenvolvedor e instrutor</h2>
                 <p>Junho de 2020 - Agosto de 2022 (2 anos 3 meses)</p>
                 <p>
                   Atuei como desenvolvedor front-end usando Angular e também
@@ -76,10 +53,36 @@ export default function Curriculum() {
               </div>
               <hr />
               <div className="my-4">
-                <h2>Grupo IV2 - Estagiário front-end</h2>
+                <h2>Grupo IV2 - Estagiário</h2>
                 <p>Novembro de 2019 - Maio de 2020 (7 meses)</p>
                 <p>Testes, desenvolvimento front-end.</p>
               </div>
+            </div>
+          </div>
+
+          <div className="border-2 border-slate-100 p-5 flex flex-col gap-2 text-slate-100">
+            <Title>Sobre mim</Title>
+            <div className="flex flex-col gap-4 text-xs md:text-base">
+              <p>
+                Sou um desenvolvedor front-end focado em tecnologias como
+                Angular e TypeScript, acumulando mais de {experienceYears} anos
+                de experiência desde o meu início na área como estagiário em
+                novembro de 2019.
+              </p>
+              <p>
+                Minhas habilidades técnicas estão mais voltadas ao front-end que
+                é onde tenho experiência sólida porém tenho estudado assuntos
+                além disso como testes unitários e de integração, algoritmos,
+                estrutura de dados, time/ space complexity, SQL e principalmente
+                Java com Spring.
+              </p>
+              <p>
+                Participei de projetos novos, projetos em andamento, projetos
+                antigos e também com migrações de tecnologia.
+              </p>
+              <p>
+                Estou focado em migrar para o back-end ou atuar como full-stack.
+              </p>
             </div>
           </div>
 
@@ -96,15 +99,9 @@ export default function Curriculum() {
                 <p>- Material Design</p>
                 <p>- Prime NG</p>
                 <p>- CSS, SCSS</p>
-                <p>
-                  - React e NextJS (não tenho experiência de trabalho mas sei
-                  usá-los)
-                </p>
-                <p>- SQL (não tenho experiência de trabalho mas sei usá-lo)</p>
-                <p>
-                  - Testes unitários/ integração com Jest (não tenho experiência
-                  de trabalho mas sei usá-lo)
-                </p>
+                <p>- Java com Spring</p>
+                <p>- SQL</p>
+                <p>- Testes unitátios / de integração (Jest)</p>
               </div>
             </div>
           </div>

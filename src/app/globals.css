@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  font-family: monospace;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 ::selection {

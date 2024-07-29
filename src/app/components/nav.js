@@ -4,7 +4,7 @@ export default function Nav() {
   const routes = [
     { pathname: "/", title: "início" },
     { pathname: "/curriculum", title: "currículo" },
-    { pathname: "/certifications", title: "certificados" },
+    // { pathname: "/certifications", title: "certificados" },
   ];
 
   return (
