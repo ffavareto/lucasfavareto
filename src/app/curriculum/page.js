@@ -93,7 +93,7 @@ export default function Curriculum() {
             <div className="flex flex-col gap-4 text-xs md:text-base">
               <div className="mb-4">
                 <p>
-                  Front-end: Angular, JavaScript, TypeScript, HTML5, CSS3,
+                  Angular, JavaScript, TypeScript, HTML5, CSS3,
                   Angular Material, Tailwind CSS, NextJS, PrimeNG, Git, GitHub,
                   Jest (unitários e de integração), conhecimento em Docker /
                   conteinerização de aplicações, conhecimento em processos de
