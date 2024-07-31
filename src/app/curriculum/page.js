@@ -64,44 +64,44 @@ export default function Curriculum() {
             <Title>Sobre mim</Title>
             <div className="flex flex-col gap-4 text-xs md:text-base">
               <p>
-                Sou um desenvolvedor front-end focado em tecnologias como
-                Angular e TypeScript, acumulando mais de {experienceYears} anos
-                de experiência desde o meu início na área como estagiário em
-                novembro de 2019.
+                Desenvolvedor front-end com mais de quatro anos de experiência
+                em tecnologias como Angular, JavaScript, TypeScript, HTML5,
+                CSS3, Angular Material e Tailwind CSS.
               </p>
               <p>
-                Minhas habilidades técnicas estão mais voltadas ao front-end que
-                é onde tenho experiência sólida porém tenho estudado assuntos
-                além disso como testes unitários e de integração, algoritmos,
-                estrutura de dados, time/ space complexity, SQL e principalmente
-                Java com Spring.
+                Tenho experiência em controle de versão com Git e GitHub, além
+                de automações com GitHub Actions.
               </p>
               <p>
-                Participei de projetos novos, projetos em andamento, projetos
-                antigos e também com migrações de tecnologia.
+                Trabalho com testes unitários e de integração usando Jest e sei
+                usar Docker para configurar ambientes de desenvolvimento.
               </p>
               <p>
-                Estou focado em migrar para o back-end ou atuar como full-stack.
+                Tenho algum conhecimento em SQL, Java, C# e um pouco de NextJS.
+                Estou em busca de uma nova oportunidade para atuar como
+                desenvolvedor full-stack ou front-end.
+              </p>
+              <p>
+                Participei de projetos novos e legados até refatorações de
+                grandes projetos.
               </p>
             </div>
           </div>
 
           <div className="border-2 border-slate-100 p-5 flex flex-col gap-2 mt-4 text-slate-100">
-            <Title>Habilidades</Title>
+            <Title>Skills</Title>
             <div className="flex flex-col gap-4 text-xs md:text-base">
               <div className="mb-4">
-                <p>- Angular</p>
-                <p>- TypeScript</p>
-                <p>- JavaScript</p>
-                <p>- Git</p>
-                <p>- Scrum</p>
-                <p>- Tailwind</p>
-                <p>- Material Design</p>
-                <p>- Prime NG</p>
-                <p>- CSS, SCSS</p>
-                <p>- Java com Spring</p>
-                <p>- SQL</p>
-                <p>- Testes unitátios / de integração (Jest)</p>
+                <p>
+                  Front-end: Angular, JavaScript, TypeScript, HTML5, CSS3,
+                  Angular Material, Tailwind CSS, NextJS, PrimeNG, Git, GitHub,
+                  Jest (unitários e de integração), conhecimento em Docker /
+                  conteinerização de aplicações, conhecimento em processos de
+                  CI/CD, GitHub Actions Scrum, kanban
+                </p>
+                <br />
+                Outras habilidades:
+                <p>Back-end: SQL, Java, C#</p>
               </div>
             </div>
           </div>
