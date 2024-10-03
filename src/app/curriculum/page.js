@@ -30,21 +30,28 @@ export default function Curriculum() {
             <Title>Experiência</Title>
             <div className="flex flex-col gap-4 text-xs md:text-base">
               <div className="mb-4">
-                <h2>ECS Inovação - Desenvolvedor web</h2>
-                <p>Setembro de 2022 - cargo atual</p>
-                <p>
-                  Na ECS, tive a oportunidade de participar ativamente da
-                  migração do projeto da Pharmalink de AngularJS para Angular 16
-                  como desenvolvedor front-end. Essa experiência foi
-                  enriquecedora, pois pude contribuir para a modernização da
-                  plataforma que agora conecta mais de <b>50 mil farmácias</b> e
-                  drogarias.
-                </p>
+                <b>ECS Inovação - Desenvolvedor web - Setembro de 2022 - cargo atual</b>
+                <div className="flex flex-col gap-4 text-xs md:text-base">
+                  <p>
+                    Na ECS, tive a oportunidade de participar ativamente da migração do projeto Pharmalink (que agora conecta mais de 50 mil farmácias e drogarias), atuei na migração da versão do framework utilizado, passando de AngularJS para Angular 16.
+                  </p>
+
+                  <p>
+                    Fui responsável pelo front-end de algumas aplicações na indústria farmacêutica e da elétrica industrial, uma delas com potencial internacional onde implementei a internacionalização da aplicação.
+                  </p>
+
+                  <p>
+                    Fui responsável também por configurar algumas pipelines no azure devops, com testes automatizados, cobertura de testes, build e deploy.
+                  </p>
+                  
+                  <p>
+                    Também apresentei melhor para outros devs a questão dos pipelines do azure devops no modo .yaml, incentivei o uso dos testes unitários/integração para aqueles que não ainda tinham costume de faze-los.
+                  </p>
+                </div>
               </div>
               <hr />
               <div className="my-4">
-                <h2>Faculdade IV2 - Desenvolvedor e instrutor</h2>
-                <p>Junho de 2020 - Agosto de 2022 (2 anos 3 meses)</p>
+                <b>Faculdade IV2 - Desenvolvedor e instrutor - Junho de 2020 - Agosto de 2022 (2 anos 3 meses)</b>
                 <p>
                   Atuei como desenvolvedor front-end usando Angular e também
                   como instrutor para iniciantes na área do desenvolvimento web,
@@ -53,8 +60,7 @@ export default function Curriculum() {
               </div>
               <hr />
               <div className="my-4">
-                <h2>Grupo IV2 - Estagiário</h2>
-                <p>Novembro de 2019 - Maio de 2020 (7 meses)</p>
+                <b>Grupo IV2 - Estagiário - Novembro de 2019 - Maio de 2020 (7 meses)</b>
                 <p>Testes, desenvolvimento front-end.</p>
               </div>
             </div>
@@ -63,28 +69,37 @@ export default function Curriculum() {
           <div className="border-2 border-slate-100 p-5 flex flex-col gap-2 text-slate-100">
             <Title>Sobre mim</Title>
             <div className="flex flex-col gap-4 text-xs md:text-base">
-              <p>
-                Desenvolvedor front-end com mais de quatro anos de experiência
-                em tecnologias como Angular, JavaScript, TypeScript, HTML5,
-                CSS3, Angular Material e Tailwind CSS.
-              </p>
-              <p>
-                Tenho experiência em controle de versão com Git e GitHub, além
-                de automações com GitHub Actions.
-              </p>
-              <p>
-                Trabalho com testes unitários e de integração usando Jest e sei
-                usar Docker para configurar ambientes de desenvolvimento.
-              </p>
-              <p>
-                Tenho algum conhecimento em SQL, Java, C# e um pouco de NextJS.
-                Estou em busca de uma nova oportunidade para atuar como
-                desenvolvedor full-stack ou front-end.
-              </p>
-              <p>
-                Participei de projetos novos e legados até refatorações de
-                grandes projetos.
-              </p>
+            <p>
+              Desenvolvedor web com quatro anos de experiência em tecnologias como Angular, JavaScript, TypeScript, HTML5, CSS3, Angular Material e Tailwind CSS.
+            </p>
+
+            <p>
+              Participei de projetos novos e legados até refatorações de grandes projetos, quase sempre usando o scrum nas equipes em que trabalhei.
+            </p>
+
+            <p>
+            Tive a oportunidade de participar ativamente da migração de um grande projeto da área farmacêutica. Essa experiência foi muito importante pois pude contribuir para a modernização de uma plataforma que conecta mais de 50 mil farmácias e drogarias.
+            </p>
+
+            <b>
+              Principais skills:
+            </b>
+
+            <p>
+              Front-end: Angular, JavaScript, TypeScript, HTML5, CSS3, Angular Material, Tailwind CSS, NextJS
+            </p>
+
+            <p>
+              Controle de versão: Git, GitHub
+            </p>
+
+            <p>
+              Testes: Jest, Vitest
+            </p>
+
+            <p>
+              CI/CD: Azure DevOps (yaml) e GitHub Actions
+            </p>
             </div>
           </div>
 
@@ -97,11 +112,8 @@ export default function Curriculum() {
                   Angular Material, Tailwind CSS, NextJS, PrimeNG, Git, GitHub,
                   Jest (unitários e de integração), conhecimento em Docker /
                   conteinerização de aplicações, conhecimento em processos de
-                  CI/CD, GitHub Actions Scrum, kanban
+                  CI/CD, GitHub Actions, Scrum, kanban
                 </p>
-                <br />
-                Outras habilidades:
-                <p>Back-end: SQL, Java, C#</p>
               </div>
             </div>
           </div>
