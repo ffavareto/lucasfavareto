@@ -3,6 +3,17 @@ import Title from "../components/title";
 export default function Curriculum() {
   const date = new Date();
   const experienceYears = date.getFullYear() - 2020;
+  const skills = [
+    'Angular, TypeScript, RxJs',
+    'JavaScript, HTML5, CSS3, SCSS',
+    'Angular Material, Tailwind CSS, Prime NG',
+    'Git, GitHub, Azure DevOps',
+    'Jest, Vitest',
+    'Conhecimento em Docker / conteinerização de aplicações',
+    'Conhecimento em processos de CI/CD, GitHub Actions e Azure DevOps (yaml)',
+    'Conhecimento em React e NextJS',
+    'Scrum, kanban'
+  ];
 
   return (
     <>
@@ -26,6 +37,23 @@ export default function Curriculum() {
         </div>
 
         <div>
+          <div className="border-2 border-slate-100 p-5 flex flex-col gap-2 mt-4 text-slate-100 mb-4">
+            <Title>Skills</Title>
+            <div className="flex flex-col gap-4 text-xs md:text-base">
+              <div className="mb-4">
+                <ul>
+                  {
+                    skills.map(skill => {
+                      return (
+                        <li>- {skill}</li>
+                      )
+                    })
+                  }
+                </ul>
+              </div>
+            </div>
+          </div>
+              
           <div className="border-2 border-slate-100 p-5 flex flex-col gap-2 mb-4 text-slate-100">
             <Title>Experiência</Title>
             <div className="flex flex-col gap-4 text-xs md:text-base">
@@ -69,54 +97,21 @@ export default function Curriculum() {
           <div className="border-2 border-slate-100 p-5 flex flex-col gap-2 text-slate-100">
             <Title>Sobre mim</Title>
             <div className="flex flex-col gap-4 text-xs md:text-base">
-            <p>
-              Desenvolvedor web com quatro anos de experiência em tecnologias como Angular, JavaScript, TypeScript, HTML5, CSS3, Angular Material e Tailwind CSS.
-            </p>
+              <p>
+                Desenvolvedor web com {experienceYears} anos de experiência em tecnologias como Angular, JavaScript, TypeScript, HTML5, CSS3, Angular Material e Tailwind CSS.
+              </p>
 
-            <p>
-              Participei de projetos novos e legados até refatorações de grandes projetos, quase sempre usando o scrum nas equipes em que trabalhei.
-            </p>
+              <p>
+                Participei de projetos novos e legados até refatorações de grandes projetos, quase sempre usando o scrum nas equipes em que trabalhei.
+              </p>
 
-            <p>
-            Tive a oportunidade de participar ativamente da migração de um grande projeto da área farmacêutica. Essa experiência foi muito importante pois pude contribuir para a modernização de uma plataforma que conecta mais de 50 mil farmácias e drogarias.
-            </p>
-
-            <b>
-              Principais skills:
-            </b>
-
-            <p>
-              Front-end: Angular, JavaScript, TypeScript, HTML5, CSS3, Angular Material, Tailwind CSS, NextJS
-            </p>
-
-            <p>
-              Controle de versão: Git, GitHub
-            </p>
-
-            <p>
-              Testes: Jest, Vitest
-            </p>
-
-            <p>
-              CI/CD: Azure DevOps (yaml) e GitHub Actions
-            </p>
+              <p>
+              Tive a oportunidade de participar ativamente da migração de um grande projeto da área farmacêutica. Essa experiência foi muito importante pois pude contribuir para a modernização de uma plataforma que conecta mais de 50 mil farmácias e drogarias.
+              </p>
             </div>
           </div>
 
-          <div className="border-2 border-slate-100 p-5 flex flex-col gap-2 mt-4 text-slate-100">
-            <Title>Skills</Title>
-            <div className="flex flex-col gap-4 text-xs md:text-base">
-              <div className="mb-4">
-                <p>
-                  Angular, JavaScript, TypeScript, HTML5, CSS3,
-                  Angular Material, Tailwind CSS, NextJS, PrimeNG, Git, GitHub,
-                  Jest (unitários e de integração), conhecimento em Docker /
-                  conteinerização de aplicações, conhecimento em processos de
-                  CI/CD, GitHub Actions, Scrum, kanban
-                </p>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
     </>
