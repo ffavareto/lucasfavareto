@@ -15,23 +15,25 @@ export default function Profile() {
       <div className="flex items-center justify-center h-screen flex-col">
         <Image
           alt="Lucas Santos"
-          className="rounded-full mb-4"
-          height={192}
+          className="rounded-full mb-4 border-green-500 border-4"
+          height={256}
+          width={256}
           priority={true}
           src={lucas}
-          width={192}
         />
 
         <div>
-          <h1 className="text-slate-100 text-4xl  text-center">Lucas Santos</h1>
-          <h1 className="text-slate-100  text-center">
+          <h1 className="text-slate-100 text-5xl text-center">Lucas Santos</h1>
+          <h1 className="text-slate-100 text-center text-xl flex">
             Front-End Developer -&nbsp;
             <a
               href="https://interstate21.com/certificate/?code=5D14JTX"
               target="_blank"
-              className="text-red-500 font-bold"
             >
-              Angular Certified
+              <div className="flex gap-1">
+                <span>Angular Certified</span>{" "}
+                <span className="text-xs">®</span>
+              </div>
             </a>
           </h1>
         </div>
@@ -41,6 +43,7 @@ export default function Profile() {
             aria-label="GitHub"
             href="https://github.com/ffavareto"
             target="_blank"
+            className="hover:scale-125 transition-all"
           >
             <FontAwesomeIcon
               aria-label="GitHub"
@@ -56,6 +59,7 @@ export default function Profile() {
             aria-label="LinkedIn"
             href="https://www.linkedin.com/in/lucasfavareto/"
             target="_blank"
+            className="hover:scale-125 transition-all"
           >
             <FontAwesomeIcon
               aria-label="LinkedIn"
@@ -71,6 +75,7 @@ export default function Profile() {
             aria-label="Gmail"
             href="mailto:lucasfavaretosantos98@gmail.com"
             target="_blank"
+            className="hover:scale-125 transition-all"
           >
             <FontAwesomeIcon
               aria-label="Gmail"
@@ -86,6 +91,7 @@ export default function Profile() {
             aria-label="Angular Certified"
             href="https://interstate21.com/certificate/?code=5D14JTX"
             target="_blank"
+            className="hover:scale-125 transition-all"
           >
             <FontAwesomeIcon
               aria-label="Angular Certified"
