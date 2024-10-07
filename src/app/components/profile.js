@@ -1,5 +1,5 @@
 import Image from "next/image";
-import lucas from "../../../public/lucas-santos.jpg";
+import lucas from "../../../public/lucas.jpeg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
