@@ -1,0 +1,17 @@
+.profile__links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    display: block;
+    width: 32px;
+    height: 32px;
+    transition: all 200ms;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

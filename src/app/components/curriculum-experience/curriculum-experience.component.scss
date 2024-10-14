@@ -1,0 +1,11 @@
+.curriculum__experience__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .curriculum__experience {
+    .experience__title {
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.profile__info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+
+  img {
+    border-radius: 50%;
+  }
+
+  .profile__title {
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile__info {
+    img {
+      width: 128px;
+      height: 128px;
+    }
+  }
+}
