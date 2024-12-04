@@ -1,7 +1,13 @@
 .curriculum__wrapper {
   margin: auto;
-  padding: 32px;
   display: flex;
   flex-direction: column;
   gap: 32px;
+  width: 50%;
+}
+
+@media (max-width: 764px) {
+  .curriculum__wrapper {
+    width: 90%;
+  }
 }

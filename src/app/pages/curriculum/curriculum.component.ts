@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CurriculumSkillsComponent } from '../../components/curriculum-skills/curriculum-skills.component';
 import { CurriculumExperienceComponent } from '../../components/curriculum-experience/curriculum-experience.component';
 import { CurriculumAboutComponent } from '../../components/curriculum-about/curriculum-about.component';
 
@@ -9,7 +8,6 @@ import { CurriculumAboutComponent } from '../../components/curriculum-about/curr
   standalone: true,
   imports: [
     CommonModule,
-    CurriculumSkillsComponent,
     CurriculumExperienceComponent,
     CurriculumAboutComponent,
   ],

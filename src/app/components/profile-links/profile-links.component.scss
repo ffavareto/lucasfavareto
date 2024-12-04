@@ -1,17 +1,31 @@
-.profile__links {
+.libutton {
   display: flex;
-  gap: 16px;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  padding: 7px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  color: #ffffff;
+  width: 200px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #0a66c2;
+}
 
-  a {
-    display: block;
-    width: 32px;
-    height: 32px;
-    transition: all 200ms;
+.dcbutton {
+  padding: 7px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  width: 200px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #03ef62;
+}
 
-    &:hover {
-      transform: scale(1.2);
-    }
-  }
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }

@@ -6,7 +6,22 @@ import { ProfileLink } from 'src/app/interfaces/profile-link';
   selector: 'app-profile-links',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './profile-links.component.html',
+  template: `
+    <div class="buttons">
+      <a
+        class="libutton"
+        href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=lucas-favareto-santos"
+        target="_blank"
+        >Me siga no LinkedIn
+      </a>
+      <a
+        class="dcbutton"
+        href="https://www.datacamp.com/portfolio/lucasfavaretosantos"
+        target="_blank"
+        >Veja meu DataCamp
+      </a>
+    </div>
+  `,
   styleUrl: './profile-links.component.scss',
 })
 export class ProfileLinksComponent {
