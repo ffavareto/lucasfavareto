@@ -10,15 +10,9 @@ import { ProfileLink } from 'src/app/interfaces/profile-link';
     <div class="buttons">
       <a
         class="libutton"
-        href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=lucas-favareto-santos"
+        href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=lucasfavaretosantos"
         target="_blank"
         >Me siga no LinkedIn
-      </a>
-      <a
-        class="dcbutton"
-        href="https://www.datacamp.com/portfolio/lucasfavaretosantos"
-        target="_blank"
-        >Veja meu DataCamp
       </a>
     </div>
   `,
