@@ -1,8 +1,24 @@
-.profile__wrapper {
+section {
+  padding: 1.5rem 0;
+}
+
+#hero {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  height: 100%;
-  gap: 16px;
+  gap: 1rem;
+  padding-top: 2rem;
+  max-width: 38rem;
+}
+
+app-profile-info,
+app-profile-links {
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 1.2rem 0;
+  }
 }
