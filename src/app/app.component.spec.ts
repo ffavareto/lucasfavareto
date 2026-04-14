@@ -8,4 +8,21 @@ describe('AppComponent', () => {
       imports: [AppComponent, RouterModule.forRoot([])],
     }).compileComponents();
   });
+
+  it('should create the app', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+
+    expect(app).toBeTruthy();
+  });
+
+  it('should render current year in footer', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+
+    const element: HTMLElement = fixture.nativeElement;
+    const footerText = element.querySelector('footer p')?.textContent ?? '';
+
+    expect(footerText).toContain(`${new Date().getFullYear()}`);
+  });
 });
