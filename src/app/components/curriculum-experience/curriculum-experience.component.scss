@@ -1,7 +1,31 @@
-.block {
-  margin: 16px 0;
+.experience__total {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+.experience__item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color-surface);
 
-  .experience__title {
-    font-weight: 600;
+  &:last-child {
+    border-bottom: none;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .experience__period {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    line-height: 1.7;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 }
