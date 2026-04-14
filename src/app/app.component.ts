@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { MenuComponent } from './components/menu/menu.component';
 
 @Component({
   standalone: true,
-  imports: [RouterModule, MenuComponent],
+  imports: [RouterModule],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {}
+export class AppComponent {
+  currentYear = new Date().getFullYear();
+}

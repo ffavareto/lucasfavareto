@@ -3,7 +3,7 @@ import { Route } from '@angular/router';
 export const appRoutes: Route[] = [
   {
     path: '',
-    title: 'Lucas Santos',
+    title: 'Lucas Favareto — Engenheiro de Software',
     loadComponent: () =>
       import('./pages/profile/profile.component').then(
         (m) => m.ProfileComponent
@@ -11,10 +11,7 @@ export const appRoutes: Route[] = [
   },
   {
     path: 'curriculum',
-    title: 'Currículo',
-    loadComponent: () =>
-      import('./pages/curriculum/curriculum.component').then(
-        (m) => m.CurriculumComponent
-      ),
+    redirectTo: '',
+    pathMatch: 'full',
   },
 ];

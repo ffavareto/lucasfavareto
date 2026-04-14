@@ -1,31 +1,42 @@
-.libutton {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 7px;
-  text-align: center;
-  outline: none;
-  text-decoration: none;
-  color: #ffffff;
-  width: 200px;
-  height: 32px;
-  border-radius: 16px;
-  background-color: #0a66c2;
-}
+.profile-links {
+  display: grid;
+  margin: 0;
+  padding: 1rem 0 0;
+  list-style: none;
+  border-top: 1px solid var(--color-border);
 
-.dcbutton {
-  padding: 7px;
-  text-align: center;
-  outline: none;
-  text-decoration: none;
-  width: 200px;
-  height: 32px;
-  border-radius: 16px;
-  background-color: #03ef62;
-}
+  li {
+    position: relative;
+    padding-left: 1rem;
 
-.buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0.72rem;
+      left: 0;
+      width: 0.35rem;
+      height: 0.35rem;
+      border-radius: 999px;
+      background: var(--color-accent-warm);
+    }
+  }
+
+  a {
+    display: inline-block;
+    color: var(--color-text-muted);
+    font-size: 0.98rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition:
+      color 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.2s ease;
+
+    &:hover {
+      color: var(--color-accent-warm);
+      border-color: currentColor;
+      transform: translateX(2px);
+    }
+  }
 }

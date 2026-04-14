@@ -1,8 +1,11 @@
-.block {
-  margin: 16px 0;
+.about__content {
+  p {
+    margin-bottom: 1rem;
+    color: var(--color-text);
+    line-height: 1.7;
+  }
 
-  ul {
-    padding-left: 32px;
-    list-style: circle;
+  p:last-child {
+    margin-bottom: 0;
   }
 }

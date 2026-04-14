@@ -7,14 +7,20 @@ import { ProfileLink } from 'src/app/interfaces/profile-link';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="buttons">
-      <a
-        class="libutton"
-        href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=lucasfavaretosantos"
-        target="_blank"
-        >Me siga no LinkedIn
-      </a>
-    </div>
+    <ul class="profile-links" aria-label="Links de perfil">
+      @for (link of links(); track link.title) {
+        <li>
+          <a
+            [href]="link.url"
+            [attr.aria-label]="'Perfil no ' + link.title"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ link.title }}
+          </a>
+        </li>
+      }
+    </ul>
   `,
   styleUrl: './profile-links.component.scss',
 })
