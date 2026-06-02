@@ -12,9 +12,8 @@ export class CurriculumExperienceComponent {
   currentJobDuration = this.calcDuration(new Date(2025, 4, 1), new Date());
 
   totalExperience = this.calcTotalExperience([
-    { start: new Date(2019, 10, 1), end: new Date(2020, 4, 1) },
-    { start: new Date(2020, 5, 1), end: new Date(2022, 7, 1) },
-    { start: new Date(2022, 8, 1), end: new Date(2025, 3, 1) },
+    { start: new Date(2019, 10, 1), end: new Date(2022, 7, 1) },
+    { start: new Date(2022, 8, 1), end: new Date(2025, 4, 1) },
     { start: new Date(2025, 4, 1), end: new Date() },
   ]);
 
