@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+
 
 @Component({
   selector: 'app-hard-skills',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './hard-skills.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './hard-skills.component.scss',
 })
 export class HardSkillsComponent {}

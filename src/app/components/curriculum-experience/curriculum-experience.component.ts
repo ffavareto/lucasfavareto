@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+
 
 @Component({
   selector: 'app-curriculum-experience',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './curriculum-experience.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './curriculum-experience.component.scss',
 })
 export class CurriculumExperienceComponent {
