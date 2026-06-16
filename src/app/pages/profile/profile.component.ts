@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+
 import { ProfileInfoComponent } from '../../components/profile-info/profile-info.component';
 import { ProfileLinksComponent } from '../../components/profile-links/profile-links.component';
 import { CurriculumAboutComponent } from '../../components/curriculum-about/curriculum-about.component';
@@ -11,14 +11,14 @@ import { ProfileLink } from '../../interfaces/profile-link';
   selector: 'app-profile',
   standalone: true,
   imports: [
-    CommonModule,
     ProfileInfoComponent,
     ProfileLinksComponent,
     CurriculumAboutComponent,
     CurriculumExperienceComponent,
-    HardSkillsComponent,
-  ],
+    HardSkillsComponent
+],
   templateUrl: './profile.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './profile.component.scss',
 })
 export class ProfileComponent {

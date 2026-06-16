@@ -1,11 +1,11 @@
-import { Component, input } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ProfileLink } from 'src/app/interfaces/profile-link';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
+
+import { ProfileLink } from '../../interfaces/profile-link';
 
 @Component({
   selector: 'app-profile-links',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   template: `
     <ul class="profile-links" aria-label="Links de perfil">
       @for (link of links(); track link.title) {
@@ -22,6 +22,7 @@ import { ProfileLink } from 'src/app/interfaces/profile-link';
       }
     </ul>
   `,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './profile-links.component.scss',
 })
 export class ProfileLinksComponent {
