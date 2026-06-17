@@ -1,0 +1,23 @@
+<nav class="tag-list" aria-label="Filtrar por tag">
+  <ul class="tag-list__items">
+    <li>
+      <a
+        [routerLink]="['/blog']"
+        class="tag-list__tag"
+        [class.tag-list__tag--active]="!activeTag()"
+        [attr.aria-current]="!activeTag() ? 'page' : null"
+      >Todos</a>
+    </li>
+    @for (tag of tags(); track tag) {
+      <li>
+        <a
+          [routerLink]="['/blog']"
+          [queryParams]="{ tag: tag }"
+          class="tag-list__tag"
+          [class.tag-list__tag--active]="activeTag() === tag"
+          [attr.aria-current]="activeTag() === tag ? 'page' : null"
+        >{{ tag }}</a>
+      </li>
+    }
+  </ul>
+</nav>
