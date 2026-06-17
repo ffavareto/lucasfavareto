@@ -14,4 +14,35 @@ export const appRoutes: Route[] = [
     redirectTo: '',
     pathMatch: 'full',
   },
+  {
+    path: 'blog',
+    title: 'Blog — Lucas Favareto',
+    loadComponent: () =>
+      import('./pages/blog-list/blog-list.component').then(
+        (m) => m.BlogListComponent
+      ),
+  },
+  {
+    path: 'blog/:slug',
+    loadComponent: () =>
+      import('./pages/blog-post/blog-post.component').then(
+        (m) => m.BlogPostComponent
+      ),
+  },
+  {
+    path: 'not-found',
+    title: 'Página não encontrada — Lucas Favareto',
+    loadComponent: () =>
+      import('./pages/not-found/not-found.component').then(
+        (m) => m.NotFoundComponent
+      ),
+  },
+  {
+    path: '**',
+    title: 'Página não encontrada — Lucas Favareto',
+    loadComponent: () =>
+      import('./pages/not-found/not-found.component').then(
+        (m) => m.NotFoundComponent
+      ),
+  },
 ];

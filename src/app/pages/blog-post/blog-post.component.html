@@ -1,0 +1,51 @@
+<article class="blog-post" aria-live="polite" aria-atomic="false">
+  @if (state() === 'loading') {
+    <p class="blog-post__message">Carregando post…</p>
+  } @else if (state() === 'error') {
+    <p class="blog-post__message blog-post__message--error">
+      Não foi possível carregar este post.
+      <a routerLink="/blog">Voltar para o blog</a>
+    </p>
+  } @else if (post(); as p) {
+    <header class="blog-post__header">
+      <h1 class="blog-post__title">{{ p.meta.title }}</h1>
+      <div class="blog-post__meta">
+        <time [dateTime]="p.meta.date">{{ p.meta.date | date:'dd/MM/yyyy' }}</time>
+        @if (p.meta.updated) {
+          <span>(atualizado em {{ p.meta.updated | date:'dd/MM/yyyy' }})</span>
+        }
+        <span>{{ p.meta.readingTime }} min de leitura</span>
+        <ul class="blog-post__tags" aria-label="Tags">
+          @for (tag of p.meta.tags; track tag) {
+            <li>
+              <a [routerLink]="['/blog']" [queryParams]="{ tag: tag }" class="blog-post__tag">{{ tag }}</a>
+            </li>
+          }
+        </ul>
+      </div>
+    </header>
+
+    @if (p.headings.length > 0) {
+      <nav class="blog-post__toc" aria-label="Sumário">
+        <p class="blog-post__toc-title">Neste post</p>
+        <ul>
+          @for (h of p.headings; track h.id) {
+            <li [class.blog-post__toc-h3]="h.level === 3">
+              <a [href]="'#' + h.id">{{ h.text }}</a>
+            </li>
+          }
+        </ul>
+      </nav>
+    }
+
+    <!--
+      [innerHTML] seguro: conteúdo gerado a partir de arquivos .md de autoria própria,
+      já sanitizado em build-time pelo pipeline (sanitize-html). Não é input de usuário.
+    -->
+    <div class="blog-post__body" [innerHTML]="p.html"></div>
+
+    <footer class="blog-post__footer">
+      <a routerLink="/blog" class="blog-post__back">← Voltar para o blog</a>
+    </footer>
+  }
+</article>
