@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "Sobre este blog",
+    "slug": "sobre-este-blog",
+    "date": "2026-06-17",
+    "description": "Por que criei este blog, como ele funciona tecnicamente e o que pretendo escrever por aqui.",
+    "tags": [
+      "Angular",
+      "blog"
+    ],
+    "readingTime": 2
+  },
+  "html": "<p>Depois de um tempo adiando, finalmente coloquei um blog no ar. Este primeiro post é sobre o porquê — e sobre como a coisa toda funciona por baixo.</p>\n<h2 id=\"por-que-um-blog\">Por que um blog?</h2>\n<p>Tenho o costume de anotar coisas que aprendo: snippets, decisões de arquitetura, soluções que levei horas para encontrar. A maioria disso fica em arquivos locais que nunca vejo de novo.</p>\n<p>Um blog resolve isso de um jeito simples: me força a organizar o pensamento antes de publicar, e o resultado fica acessível de qualquer lugar. Nada mais do que isso.</p>\n<h2 id=\"como-funciona\">Como funciona</h2>\n<p>O site é feito com <a href=\"https://angular.dev\" target=\"_blank\" rel=\"noopener noreferrer\">Angular</a> e publicado na Vercel. O blog em si é completamente estático: cada post é um arquivo <code>.md</code> no repositório, e um script Node converte esses arquivos em JSON durante o build. Sem banco de dados, sem backend, sem painel de admin.</p>\n<p>Publicar um post é fazer um <code>git push</code>.</p>\n<h3 id=\"o-pipeline-de-build\">O pipeline de build</h3>\n<pre tabindex=\"0\"><code class=\"language-javascript\">// scripts/build-blog.mjs (simplificado)\nconst { data, content } = matter(rawMarkdown);\nconst html = marked(content);\nconst safe = sanitizeHtml(html, options);\nwriteFileSync(`src/assets/blog/content/${data.slug}.json`, JSON.stringify({ meta, html: safe, headings }));</code></pre>\n<p>Os JSONs gerados ficam em <code>src/assets/blog/</code> e são servidos como assets estáticos. O Angular carrega só o JSON do post que está sendo acessado — sem baixar tudo de uma vez.</p>\n<h2 id=\"o-que-vem-por-aqui\">O que vem por aqui</h2>\n<p>Pretendo escrever sobre IA aplicada a desenvolvimento, Angular, e decisões de arquitetura que me pareceram não-óbvias na época. Sem calendário fixo — publico quando tenho algo útil para dizer.</p>\n",
+  "headings": [
+    {
+      "id": "por-que-um-blog",
+      "text": "Por que um blog?",
+      "level": 2
+    },
+    {
+      "id": "como-funciona",
+      "text": "Como funciona",
+      "level": 2
+    },
+    {
+      "id": "o-pipeline-de-build",
+      "text": "O pipeline de build",
+      "level": 3
+    },
+    {
+      "id": "o-que-vem-por-aqui",
+      "text": "O que vem por aqui",
+      "level": 2
+    }
+  ]
+}
