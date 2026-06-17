@@ -1,8 +1,9 @@
-# Add files here to ignore them from prettier formatting
 /dist
 /coverage
-/.nx/cache
-/.nx/workspace-data
-.angular
-
-.nx/self-healing
+/.nx
+/.angular
+/.claude
+/src/assets/blog
+/public/sitemap.xml
+/public/robots.txt
+package-lock.json
