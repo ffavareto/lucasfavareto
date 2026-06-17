@@ -7,11 +7,18 @@
   "sourceRoot": "./src",
   "tags": [],
   "targets": {
+    "build-blog": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "node scripts/build-blog.mjs"
+      }
+    },
     "build": {
       "executor": "@angular-devkit/build-angular:application",
       "outputs": [
         "{options.outputPath}"
       ],
+      "dependsOn": ["build-blog"],
       "options": {
         "outputPath": "dist/lucasfavareto",
         "index": "./src/index.html",
@@ -25,6 +32,11 @@
           {
             "glob": "**/*",
             "input": "public"
+          },
+          {
+            "glob": "**/*",
+            "input": "src/assets",
+            "output": "assets"
           }
         ],
         "styles": [
@@ -58,6 +70,7 @@
     },
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
+      "dependsOn": ["build-blog"],
       "configurations": {
         "production": {
           "buildTarget": "lucasfavareto:build:production"
