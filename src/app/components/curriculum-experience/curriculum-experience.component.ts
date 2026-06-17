@@ -1,6 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
-
 @Component({
   selector: 'app-curriculum-experience',
   standalone: true,
@@ -20,8 +19,7 @@ export class CurriculumExperienceComponent {
 
   private calcDuration(start: Date, end: Date): string {
     let months =
-      (end.getFullYear() - start.getFullYear()) * 12 +
-      (end.getMonth() - start.getMonth());
+      (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
 
     if (months < 1) {
       return 'menos de 1 mês';
@@ -39,15 +37,13 @@ export class CurriculumExperienceComponent {
     return parts.join(' e ');
   }
 
-  private calcTotalExperience(
-    periods: { start: Date; end: Date }[]
-  ): string {
+  private calcTotalExperience(periods: { start: Date; end: Date }[]): string {
     const totalMonths = periods.reduce(
       (sum, p) =>
         sum +
         (p.end.getFullYear() - p.start.getFullYear()) * 12 +
         (p.end.getMonth() - p.start.getMonth()),
-      0
+      0,
     );
 
     const years = Math.floor(totalMonths / 12);

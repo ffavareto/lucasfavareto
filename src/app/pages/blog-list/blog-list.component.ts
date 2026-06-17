@@ -1,9 +1,16 @@
-import { Component, OnInit, inject, signal, computed, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  type OnInit,
+  inject,
+  signal,
+  computed,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BlogService } from '../../services/blog.service';
 import { PostCardComponent } from '../../components/post-card/post-card.component';
 import { TagListComponent } from '../../components/tag-list/tag-list.component';
-import { PostMeta } from '../../interfaces/post-meta';
+import { type PostMeta } from '../../interfaces/post-meta';
 
 type LoadState = 'loading' | 'loaded' | 'error';
 
@@ -40,18 +47,16 @@ export class BlogListComponent implements OnInit {
   filteredPosts = computed(() => {
     const tag = this.activeTag();
     if (!tag) return this.allPosts();
-    return this.allPosts().filter(p =>
-      p.tags.some(t => t.toLowerCase() === tag.toLowerCase())
-    );
+    return this.allPosts().filter((p) => p.tags.some((t) => t.toLowerCase() === tag.toLowerCase()));
   });
 
   ngOnInit(): void {
-    this.route.queryParamMap.subscribe(params => {
+    this.route.queryParamMap.subscribe((params) => {
       this.activeTag.set(params.get('tag'));
     });
 
     this.blogService.getAllPosts().subscribe({
-      next: posts => {
+      next: (posts) => {
         this.allPosts.set(posts);
         this.state.set('loaded');
       },

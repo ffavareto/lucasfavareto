@@ -1,23 +1,20 @@
 <article class="post-card">
-  <a
-    class="post-card__link"
-    [routerLink]="['/blog', meta().slug]"
-    [attr.aria-label]="meta().title"
-  >
+  <a class="post-card__link" [routerLink]="['/blog', meta().slug]" [attr.aria-label]="meta().title">
     <h2 class="post-card__title">{{ meta().title }}</h2>
   </a>
   <p class="post-card__description">{{ meta().description }}</p>
   <footer class="post-card__meta">
-    <time
-      class="post-card__date"
-      [dateTime]="meta().date"
-    >{{ meta().date | date:'dd/MM/yyyy' }}</time>
+    <time class="post-card__date" [dateTime]="meta().date">{{
+      meta().date | date : 'dd/MM/yyyy'
+    }}</time>
     <span class="post-card__reading-time">{{ meta().readingTime }} min de leitura</span>
     <ul class="post-card__tags" aria-label="Tags">
       @for (tag of meta().tags; track tag) {
-        <li>
-          <a [routerLink]="['/blog']" [queryParams]="{ tag: tag }" class="post-card__tag">{{ tag }}</a>
-        </li>
+      <li>
+        <a [routerLink]="['/blog']" [queryParams]="{ tag: tag }" class="post-card__tag">{{
+          tag
+        }}</a>
+      </li>
       }
     </ul>
   </footer>

@@ -1,15 +1,15 @@
 :root {
-  --color-bg:            #f6f3f2;
-  --color-surface:       #ede7e5;
-  --color-surface-strong:#e3d8d5;
-  --color-text:          #1e1a1a;
-  --color-text-muted:    #6e6360;
-  --color-accent:        #2a2423;
-  --color-accent-warm:   #da3b32;
-  --color-border:        #d8ccca;
+  --color-bg: #f6f3f2;
+  --color-surface: #ede7e5;
+  --color-surface-strong: #e3d8d5;
+  --color-text: #1e1a1a;
+  --color-text-muted: #6e6360;
+  --color-accent: #2a2423;
+  --color-accent-warm: #da3b32;
+  --color-border: #d8ccca;
 
   --font-heading: 'Manrope', sans-serif;
-  --font-body:    'Inter Tight', sans-serif;
+  --font-body: 'Inter Tight', sans-serif;
 }
 
 * {
@@ -26,8 +26,7 @@ html {
 body {
   min-height: 100vh;
   background-color: var(--color-bg);
-  background:
-    radial-gradient(circle at top left, rgba(218, 59, 50, 0.08) 0%, transparent 34%),
+  background: radial-gradient(circle at top left, rgba(218, 59, 50, 0.08) 0%, transparent 34%),
     radial-gradient(circle at bottom right, rgba(255, 143, 91, 0.08) 0%, transparent 30%),
     linear-gradient(180deg, #faf7f6 0%, var(--color-bg) 100%);
   color: var(--color-text);
@@ -39,7 +38,9 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-heading);
   color: var(--color-accent);
   margin-top: 0;

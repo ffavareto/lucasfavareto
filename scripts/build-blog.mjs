@@ -1,4 +1,3 @@
-// @ts-check
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -19,16 +18,25 @@ const REQUIRED_FIELDS = ['title', 'slug', 'date', 'description', 'tags', 'draft'
 const SANITIZE_OPTIONS = {
   allowedTags: [
     ...sanitizeHtml.defaults.allowedTags,
-    'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
-    'pre', 'code', 'img', 'figure', 'figcaption',
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'h6',
+    'pre',
+    'code',
+    'img',
+    'figure',
+    'figcaption',
   ],
   allowedAttributes: {
     ...sanitizeHtml.defaults.allowedAttributes,
     '*': ['id', 'class', 'tabindex'],
-    'a': ['href', 'title', 'target', 'rel', 'aria-label'],
-    'img': ['src', 'alt', 'width', 'height', 'loading'],
-    'pre': ['tabindex'],
-    'code': ['class'],
+    a: ['href', 'title', 'target', 'rel', 'aria-label'],
+    img: ['src', 'alt', 'width', 'height', 'loading'],
+    pre: ['tabindex'],
+    code: ['class'],
   },
 };
 
@@ -64,7 +72,9 @@ function buildRenderer() {
 
   renderer.image = ({ href, title, text }) => {
     if (!text || text.trim() === '') {
-      throw new Error(`Imagem sem alt text: src="${href}". Todo ![alt](url) deve ter alt descritivo.`);
+      throw new Error(
+        `Imagem sem alt text: src="${href}". Todo ![alt](url) deve ter alt descritivo.`,
+      );
     }
     const titleAttr = title ? ` title="${title}"` : '';
     return `<img src="${href}" alt="${text}"${titleAttr} loading="lazy">`;
@@ -130,7 +140,7 @@ function run() {
   mkdirSync(ASSETS_DIR, { recursive: true });
   mkdirSync(CONTENT_DIR, { recursive: true });
 
-  const files = readdirSync(POSTS_DIR).filter(f => f.endsWith('.md'));
+  const files = readdirSync(POSTS_DIR).filter((f) => f.endsWith('.md'));
 
   if (files.length === 0) {
     console.log('Nenhum post encontrado. Gerando posts.json vazio.');
@@ -167,14 +177,26 @@ function run() {
   writeFileSync(join(ASSETS_DIR, 'posts.json'), JSON.stringify(posts, null, 2), 'utf-8');
   console.log(`\n${posts.length} post(s) publicado(s) em src/assets/blog/posts.json`);
 
-  const sitemapBlog = posts.map(p => ({ slug: p.slug, date: p.updated ?? p.date }));
-  writeFileSync(join(ASSETS_DIR, 'sitemap-blog.json'), JSON.stringify(sitemapBlog, null, 2), 'utf-8');
+  const sitemapBlog = posts.map((p) => ({
+    slug: p.slug,
+    date: p.updated ?? p.date,
+  }));
+  writeFileSync(
+    join(ASSETS_DIR, 'sitemap-blog.json'),
+    JSON.stringify(sitemapBlog, null, 2),
+    'utf-8',
+  );
 
   const baseUrl = 'https://lucasfavareto.com.br';
   const today = new Date().toISOString().split('T')[0];
 
   const postEntries = posts
-    .map(p => `  <url>\n    <loc>${baseUrl}/blog/${p.slug}</loc>\n    <lastmod>${p.updated ?? p.date}</lastmod>\n  </url>`)
+    .map(
+      (p) =>
+        `  <url>\n    <loc>${baseUrl}/blog/${p.slug}</loc>\n    <lastmod>${
+          p.updated ?? p.date
+        }</lastmod>\n  </url>`,
+    )
     .join('\n');
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

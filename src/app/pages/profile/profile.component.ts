@@ -5,7 +5,7 @@ import { ProfileLinksComponent } from '../../components/profile-links/profile-li
 import { CurriculumAboutComponent } from '../../components/curriculum-about/curriculum-about.component';
 import { CurriculumExperienceComponent } from '../../components/curriculum-experience/curriculum-experience.component';
 import { HardSkillsComponent } from '../../components/hard-skills/hard-skills.component';
-import { ProfileLink } from '../../interfaces/profile-link';
+import { type ProfileLink } from '../../interfaces/profile-link';
 
 @Component({
   selector: 'app-profile',
@@ -15,8 +15,8 @@ import { ProfileLink } from '../../interfaces/profile-link';
     ProfileLinksComponent,
     CurriculumAboutComponent,
     CurriculumExperienceComponent,
-    HardSkillsComponent
-],
+    HardSkillsComponent,
+  ],
   templateUrl: './profile.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './profile.component.scss',

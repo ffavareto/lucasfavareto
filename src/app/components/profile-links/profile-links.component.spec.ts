@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { type ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProfileLinksComponent } from './profile-links.component';
 
 describe('ProfileLinksComponent', () => {

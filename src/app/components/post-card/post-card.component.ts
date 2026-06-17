@@ -1,7 +1,7 @@
 import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DatePipe } from '@angular/common';
-import { PostMeta } from '../../interfaces/post-meta';
+import { type PostMeta } from '../../interfaces/post-meta';
 
 @Component({
   selector: 'app-post-card',

@@ -28,7 +28,10 @@ Publicar um post é fazer um `git push`.
 const { data, content } = matter(rawMarkdown);
 const html = marked(content);
 const safe = sanitizeHtml(html, options);
-writeFileSync(`src/assets/blog/content/${data.slug}.json`, JSON.stringify({ meta, html: safe, headings }));
+writeFileSync(
+  `src/assets/blog/content/${data.slug}.json`,
+  JSON.stringify({ meta, html: safe, headings }),
+);
 ```
 
 Os JSONs gerados ficam em `src/assets/blog/` e são servidos como assets estáticos. O Angular carrega só o JSON do post que está sendo acessado — sem baixar tudo de uma vez.

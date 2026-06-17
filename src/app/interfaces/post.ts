@@ -1,4 +1,4 @@
-import { PostMeta } from './post-meta';
+import { type PostMeta } from './post-meta';
 
 export interface PostHeading {
   id: string;

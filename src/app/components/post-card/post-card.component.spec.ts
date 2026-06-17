@@ -1,7 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { type ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { PostCardComponent } from './post-card.component';
-import { PostMeta } from '../../interfaces/post-meta';
+import { type PostMeta } from '../../interfaces/post-meta';
 
 const mockMeta: PostMeta = {
   title: 'Post de teste',

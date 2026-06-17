@@ -2,8 +2,8 @@ import { TestBed } from '@angular/core/testing';
 import { provideHttpClient } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { BlogService } from './blog.service';
-import { PostMeta } from '../interfaces/post-meta';
-import { Post } from '../interfaces/post';
+import { type PostMeta } from '../interfaces/post-meta';
+import { type Post } from '../interfaces/post';
 
 const mockMeta: PostMeta = {
   title: 'Post de teste',
@@ -42,7 +42,7 @@ describe('BlogService', () => {
 
   it('getAllPosts should return list of post meta', () => {
     let result: PostMeta[] | undefined;
-    service.getAllPosts().subscribe(posts => (result = posts));
+    service.getAllPosts().subscribe((posts) => (result = posts));
 
     const req = httpMock.expectOne('/assets/blog/posts.json');
     expect(req.request.method).toBe('GET');
@@ -53,7 +53,7 @@ describe('BlogService', () => {
 
   it('getPostBySlug should return post by slug', () => {
     let result: Post | undefined;
-    service.getPostBySlug('post-de-teste').subscribe(post => (result = post));
+    service.getPostBySlug('post-de-teste').subscribe((post) => (result = post));
 
     const req = httpMock.expectOne('/assets/blog/content/post-de-teste.json');
     expect(req.request.method).toBe('GET');
@@ -65,7 +65,7 @@ describe('BlogService', () => {
   it('getPostBySlug should propagate 404 error', () => {
     let errorStatus: number | undefined;
     service.getPostBySlug('inexistente').subscribe({
-      error: err => (errorStatus = err.status),
+      error: (err) => (errorStatus = err.status),
     });
 
     const req = httpMock.expectOne('/assets/blog/content/inexistente.json');

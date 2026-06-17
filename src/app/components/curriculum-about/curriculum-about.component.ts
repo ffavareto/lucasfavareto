@@ -1,6 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
-
 @Component({
   selector: 'app-curriculum-about',
   standalone: true,

@@ -1,10 +1,10 @@
-import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
+import { type ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { ActivatedRoute, convertToParamMap } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { of, throwError } from 'rxjs';
 import { BlogPostComponent } from './blog-post.component';
 import { BlogService } from '../../services/blog.service';
-import { Post } from '../../interfaces/post';
+import { type Post } from '../../interfaces/post';
 
 const mockPost: Post = {
   meta: {
@@ -32,9 +32,7 @@ describe('BlogPostComponent', () => {
   async function setup(postResult: Post | null = mockPost, errorStatus?: number) {
     const blogServiceMock = {
       getPostBySlug: () =>
-        errorStatus
-          ? throwError(() => ({ status: errorStatus }))
-          : of(postResult),
+        errorStatus ? throwError(() => ({ status: errorStatus })) : of(postResult),
     };
 
     await TestBed.configureTestingModule({

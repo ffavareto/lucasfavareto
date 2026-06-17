@@ -1,8 +1,8 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { PostMeta } from '../interfaces/post-meta';
-import { Post } from '../interfaces/post';
+import { type Observable } from 'rxjs';
+import { type PostMeta } from '../interfaces/post-meta';
+import { type Post } from '../interfaces/post';
 
 @Injectable({ providedIn: 'root' })
 export class BlogService {

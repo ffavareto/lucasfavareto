@@ -1,9 +1,16 @@
-import { Component, OnInit, OnDestroy, inject, signal, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  type OnInit,
+  type OnDestroy,
+  inject,
+  signal,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 import { DatePipe } from '@angular/common';
 import { BlogService } from '../../services/blog.service';
-import { Post } from '../../interfaces/post';
+import { type Post } from '../../interfaces/post';
 
 type LoadState = 'loading' | 'loaded' | 'error';
 
@@ -30,13 +37,13 @@ export class BlogPostComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     const slug = this.route.snapshot.paramMap.get('slug') ?? '';
     this.blogService.getPostBySlug(slug).subscribe({
-      next: post => {
+      next: (post) => {
         this.post.set(post);
         this.state.set('loaded');
         this.titleService.setTitle(`${post.meta.title} — Lucas Favareto`);
         this.metaService.updateTag({ name: 'description', content: post.meta.description });
       },
-      error: err => {
+      error: (err) => {
         if (err.status === 404) {
           this.router.navigate(['/not-found']);
           return;

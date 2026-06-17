@@ -2,34 +2,31 @@
   <h1 class="blog-list__heading">Blog</h1>
 
   @if (allTags().length > 0) {
-    <app-tag-list [tags]="allTags()" [activeTag]="activeTag()" />
+  <app-tag-list [tags]="allTags()" [activeTag]="activeTag()" />
   }
 
   <div aria-live="polite" aria-atomic="true" class="blog-list__status">
     @if (state() === 'loading') {
-      <p class="blog-list__message">Carregando posts…</p>
+    <p class="blog-list__message">Carregando posts…</p>
     } @else if (state() === 'error') {
-      <p class="blog-list__message blog-list__message--error">
-        Não foi possível carregar os posts. Tente novamente mais tarde.
-      </p>
+    <p class="blog-list__message blog-list__message--error">
+      Não foi possível carregar os posts. Tente novamente mais tarde.
+    </p>
     } @else if (filteredPosts().length === 0) {
-      <p class="blog-list__message">
-        @if (activeTag()) {
-          Nenhum post encontrado com a tag "{{ activeTag() }}".
-        } @else {
-          Nenhum post publicado ainda.
-        }
-      </p>
+    <p class="blog-list__message">
+      @if (activeTag()) { Nenhum post encontrado com a tag "{{ activeTag() }}". } @else { Nenhum
+      post publicado ainda. }
+    </p>
     }
   </div>
 
   @if (state() === 'loaded' && filteredPosts().length > 0) {
-    <ul class="blog-list__posts">
-      @for (post of filteredPosts(); track post.slug) {
-        <li>
-          <app-post-card [meta]="post" />
-        </li>
-      }
-    </ul>
+  <ul class="blog-list__posts">
+    @for (post of filteredPosts(); track post.slug) {
+    <li>
+      <app-post-card [meta]="post" />
+    </li>
+    }
+  </ul>
   }
 </section>

@@ -1,14 +1,28 @@
-import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
+import { type ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { ActivatedRoute } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { of, throwError } from 'rxjs';
 import { BlogListComponent } from './blog-list.component';
 import { BlogService } from '../../services/blog.service';
-import { PostMeta } from '../../interfaces/post-meta';
+import { type PostMeta } from '../../interfaces/post-meta';
 
 const mockPosts: PostMeta[] = [
-  { title: 'Post A', slug: 'post-a', date: '2026-06-17', description: 'Desc A.', tags: ['Angular', 'blog'], readingTime: 2 },
-  { title: 'Post B', slug: 'post-b', date: '2026-06-10', description: 'Desc B.', tags: ['IA'], readingTime: 5 },
+  {
+    title: 'Post A',
+    slug: 'post-a',
+    date: '2026-06-17',
+    description: 'Desc A.',
+    tags: ['Angular', 'blog'],
+    readingTime: 2,
+  },
+  {
+    title: 'Post B',
+    slug: 'post-b',
+    date: '2026-06-10',
+    description: 'Desc B.',
+    tags: ['IA'],
+    readingTime: 5,
+  },
 ];
 
 function createActivatedRoute(tag: string | null = null) {
@@ -27,7 +41,9 @@ describe('BlogListComponent', () => {
       providers: [
         {
           provide: BlogService,
-          useValue: { getAllPosts: () => (error ? throwError(() => new Error('fail')) : of(posts)) },
+          useValue: {
+            getAllPosts: () => (error ? throwError(() => new Error('fail')) : of(posts)),
+          },
         },
         { provide: ActivatedRoute, useValue: createActivatedRoute(tag) },
       ],
